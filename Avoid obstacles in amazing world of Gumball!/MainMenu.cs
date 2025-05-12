@@ -21,8 +21,6 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             InitializeComponent();
             clickSound = new SoundPlayer(Properties.Resources.Click);
             clickSound.Load();
-
-            // Подписываем все кнопки на событие
             SubscribeAllButtons(this);
         }
 
@@ -30,26 +28,21 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
         {
             foreach (Control c in control.Controls)
             {
-                // Если это кнопка
                 if (c is Button button)
                 {
                     button.Click += GlobalButtonClick;
                 }
-                // Если это контейнер (Panel, GroupBox и т.д.)
                 else if (c.HasChildren)
                 {
                     SubscribeAllButtons(c);
                 }
             }
         }
-
+        //Глобальное проигрывание звука при нажатии на кнопку
         private void GlobalButtonClick(object sender, EventArgs e)
         {
             clickSound.Play();
-
-            // Дополнительно: можно получить конкретную кнопку
             Button clickedButton = sender as Button;
-            // clickedButton.Text - текст кнопки и т.д.
         }
         //Кнопка выхода из игры
         private void exitBTN_Click(object sender, EventArgs e)
@@ -73,14 +66,14 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             var url = "https://github.com/UstyantsewaME/Avoid-obstacles-in-amazing-world-of-Gumball-.git";
             System.Diagnostics.Process.Start(url);
         }
-
+        //Кнопка перехода в настройки
         private void settingsBTN_Click(object sender, EventArgs e)
         {
             SettingsMenu settingsMenu = new SettingsMenu();
             settingsMenu.Show();
             this.Hide();
         }
-
+        //Воспроизведение звука при наведении на кнопки
         private DateTime lastHoverTime = DateTime.MinValue;
         private void BTN_MouseEnter(object sender, EventArgs e)
         {

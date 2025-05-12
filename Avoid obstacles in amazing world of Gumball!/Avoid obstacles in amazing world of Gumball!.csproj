@@ -96,6 +96,7 @@
     <None Include="Images\Logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\return-12-05-2025.png" />
     <Content Include="Sounds\Click.wav" />
     <Content Include="Sounds\Select.wav" />
     <None Include="Images\Button.png" />
