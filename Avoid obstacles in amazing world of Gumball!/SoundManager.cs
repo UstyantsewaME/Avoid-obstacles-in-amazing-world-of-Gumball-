@@ -3,6 +3,7 @@ using System.Media;
 using System.Runtime.InteropServices;
 using System.Windows.Media;
 using System.IO;
+using System.Diagnostics;
 
 namespace Avoid_obstacles_in_amazing_world_of_Gumball_
 {
@@ -50,8 +51,19 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
                 if (backgroundMusic == null)
                 {
                     backgroundMusic = new MediaPlayer();
-                    string musicPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "Main theme.mp3");
-                    backgroundMusic.Open(new Uri(musicPath, UriKind.Absolute));
+
+                    // Создаем временный файл из ресурсов
+                    string tempFile = Path.Combine(Path.GetTempPath(), "Main_theme.wav");
+
+                    // Преобразуем ресурс в byte[] и сохраняем во временный файл
+                    using (var stream = Properties.Resources.Main_theme)
+                    {
+                        byte[] buffer = new byte[stream.Length];
+                        stream.Read(buffer, 0, buffer.Length);
+                        File.WriteAllBytes(tempFile, buffer);
+                    }
+
+                    backgroundMusic.Open(new Uri(tempFile));
                     backgroundMusic.MediaEnded += (s, e) => {
                         backgroundMusic.Position = TimeSpan.Zero;
                         backgroundMusic.Play();
@@ -60,9 +72,9 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
                     backgroundMusic.Play();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                // Игнорируем ошибки воспроизведения
+                Debug.WriteLine("Ошибка инициализации музыки: " + ex.Message);
             }
         }
 
