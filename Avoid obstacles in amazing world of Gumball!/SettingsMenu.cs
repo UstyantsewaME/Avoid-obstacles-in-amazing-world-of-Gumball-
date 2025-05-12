@@ -22,10 +22,6 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             clickSound.Load();
             SubscribeAllButtons(this);
 
-            // Устанавливаем значения из настроек
-            btnSoundBar.Value = (int)(Properties.Settings.Default.SoundVolume * 10);
-            musicBar.Value = (int)(Properties.Settings.Default.MusicVolume * 10);
-
             btnSoundBar.ValueChanged += BtnSoundBar_ValueChanged;
             musicBar.ValueChanged += MusicBar_ValueChanged;
         }
