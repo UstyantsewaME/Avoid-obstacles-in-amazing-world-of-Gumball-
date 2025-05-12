@@ -21,8 +21,34 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             clickSound = new SoundPlayer(Properties.Resources.Click);
             clickSound.Load();
             SubscribeAllButtons(this);
+
+            // Устанавливаем значения из настроек
+            btnSoundBar.Value = (int)(Properties.Settings.Default.SoundVolume * 10);
+            musicBar.Value = (int)(Properties.Settings.Default.MusicVolume * 10);
+
+            btnSoundBar.ValueChanged += BtnSoundBar_ValueChanged;
+            musicBar.ValueChanged += MusicBar_ValueChanged;
         }
 
+        //Обработка изменения громкости звуков
+        private void BtnSoundBar_ValueChanged(object sender, EventArgs e)
+        {
+            float value = btnSoundBar.Value / 10.0f;
+            SoundManager.SoundVolume = value;
+            Properties.Settings.Default.SoundVolume = (decimal)value;
+            Properties.Settings.Default.Save();
+        }
+
+        //Обработка изменения громкости музыки
+        private void MusicBar_ValueChanged(object sender, EventArgs e)
+        {
+            float value = musicBar.Value / 10.0f;
+            SoundManager.MusicVolume = value;
+            Properties.Settings.Default.MusicVolume = (decimal)value;
+            Properties.Settings.Default.Save();
+        }
+
+        //Подписка всех кнопок на глобальное событие клика
         private void SubscribeAllButtons(Control control)
         {
             foreach (Control c in control.Controls)

@@ -23,6 +23,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             clickSound = new SoundPlayer(Properties.Resources.Click);
             clickSound.Load();
             SubscribeAllButtons(this);
+            SoundManager.InitializeBackgroundMusic();
         }
 
         //Обработка события закрытия формы

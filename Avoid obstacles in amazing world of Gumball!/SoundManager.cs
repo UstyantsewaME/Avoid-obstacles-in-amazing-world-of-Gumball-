@@ -22,15 +22,13 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             set
             {
                 soundVolume = Math.Max(0, Math.Min(1, value));
-                // Convert volume to Windows volume format (0-65535)
                 uint windowsVolume = (uint)(soundVolume * 65535);
-                // Set both left and right channels to the same volume
                 uint fullVolume = (windowsVolume << 16) | windowsVolume;
                 waveOutSetVolume(IntPtr.Zero, fullVolume);
             }
         }
 
-        //Громкость музыки
+        //Громкость музыки 
         public static float MusicVolume
         {
             get { return musicVolume; }
@@ -64,6 +62,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
+                // Игнорируем ошибки воспроизведения
             }
         }
 
@@ -81,6 +80,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
+                // Игнорируем ошибки остановки
             }
         }
 
@@ -96,6 +96,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
+                // Игнорируем ошибки воспроизведения
             }
         }
 
@@ -111,6 +112,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
+                // Игнорируем ошибки воспроизведения
             }
         }
 
