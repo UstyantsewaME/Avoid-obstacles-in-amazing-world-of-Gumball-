@@ -52,6 +52,8 @@
             this.settingsBTN.Size = new System.Drawing.Size(313, 70);
             this.settingsBTN.TabIndex = 2;
             this.settingsBTN.UseVisualStyleBackColor = false;
+            this.settingsBTN.Click += new System.EventHandler(this.settingsBTN_Click);
+            this.settingsBTN.MouseEnter += new System.EventHandler(this.BTN_MouseEnter);
             // 
             // playBTN
             // 
@@ -67,6 +69,7 @@
             this.playBTN.Size = new System.Drawing.Size(175, 57);
             this.playBTN.TabIndex = 1;
             this.playBTN.UseVisualStyleBackColor = false;
+            this.playBTN.MouseEnter += new System.EventHandler(this.BTN_MouseEnter);
             // 
             // pictureBox1
             // 
@@ -97,6 +100,7 @@
             this.exitBTN.TabIndex = 3;
             this.exitBTN.UseVisualStyleBackColor = false;
             this.exitBTN.Click += new System.EventHandler(this.exitBTN_Click);
+            this.exitBTN.MouseEnter += new System.EventHandler(this.BTN_MouseEnter);
             // 
             // gitBTN
             // 
@@ -114,6 +118,7 @@
             this.gitBTN.TabIndex = 4;
             this.gitBTN.UseVisualStyleBackColor = false;
             this.gitBTN.Click += new System.EventHandler(this.gitBTN_Click);
+            this.gitBTN.MouseEnter += new System.EventHandler(this.BTN_MouseEnter);
             // 
             // MainMenu
             // 
