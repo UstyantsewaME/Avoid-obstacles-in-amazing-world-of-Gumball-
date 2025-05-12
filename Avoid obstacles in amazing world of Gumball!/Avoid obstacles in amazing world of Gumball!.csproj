@@ -44,6 +44,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainMenu.cs">
@@ -60,6 +63,7 @@
     <Compile Include="SettingsMenu.Designer.cs">
       <DependentUpon>SettingsMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoundManager.cs" />
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,9 +100,12 @@
     <None Include="Images\Logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\Buttons-sound-12-05-2025.png" />
     <None Include="Images\return-12-05-2025.png" />
     <Content Include="Sounds\Click.wav" />
+    <Content Include="Sounds\Main theme.wav" />
     <Content Include="Sounds\Select.wav" />
+    <Content Include="Sounds\MainTheme.mp3" />
     <None Include="Images\Button.png" />
     <Content Include="Images\Exit.png" />
     <Content Include="Images\Github-12-05-2025.png" />

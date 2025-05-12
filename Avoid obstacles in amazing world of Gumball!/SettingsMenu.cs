@@ -20,6 +20,29 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             clickSound = new SoundPlayer(Properties.Resources.Click);
             clickSound.Load();
             SubscribeAllButtons(this);
+            
+            // Устанавливаем значения из настроек
+            btnSoundBar.Value = (int)(Properties.Settings.Default.SoundVolume * 10);
+            musicBar.Value = (int)(Properties.Settings.Default.MusicVolume * 10);
+            
+            btnSoundBar.ValueChanged += BtnSoundBar_ValueChanged;
+            musicBar.ValueChanged += MusicBar_ValueChanged;
+        }
+
+        private void BtnSoundBar_ValueChanged(object sender, EventArgs e)
+        {
+            float value = btnSoundBar.Value / 10.0f;
+            SoundManager.SoundVolume = value;
+            Properties.Settings.Default.SoundVolume = (decimal)value;
+            Properties.Settings.Default.Save();
+        }
+
+        private void MusicBar_ValueChanged(object sender, EventArgs e)
+        {
+            float value = musicBar.Value / 10.0f;
+            SoundManager.MusicVolume = value;
+            Properties.Settings.Default.MusicVolume = (decimal)value;
+            Properties.Settings.Default.Save();
         }
 
         private void SubscribeAllButtons(Control control)
@@ -39,7 +62,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
 
         private void GlobalButtonClick(object sender, EventArgs e)
         {
-            clickSound.Play();
+            SoundManager.PlayClick();
             Button clickedButton = sender as Button;
         }
 
@@ -58,9 +81,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
                 return;
 
             lastHoverTime = DateTime.Now;
-
-            SoundPlayer player = new SoundPlayer(Properties.Resources.Select);
-            player.Play();
+            SoundManager.PlaySelect();
         }
     }
 }

@@ -32,10 +32,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.returnBTN = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.btnSoundBar = new System.Windows.Forms.TrackBar();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.musicBar = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSoundBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicBar)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -80,13 +84,33 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // trackBar1
+            // btnSoundBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(438, 203);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(284, 45);
-            this.trackBar1.TabIndex = 7;
-            this.trackBar1.Value = 10;
+            this.btnSoundBar.Location = new System.Drawing.Point(438, 203);
+            this.btnSoundBar.Name = "btnSoundBar";
+            this.btnSoundBar.Size = new System.Drawing.Size(284, 45);
+            this.btnSoundBar.TabIndex = 7;
+            this.btnSoundBar.Value = 5;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.Buttons_sound_12_05_2025;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 300);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(420, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // musicBar
+            // 
+            this.musicBar.Location = new System.Drawing.Point(438, 312);
+            this.musicBar.Name = "musicBar";
+            this.musicBar.Size = new System.Drawing.Size(284, 45);
+            this.musicBar.TabIndex = 9;
+            this.musicBar.Value = 5;
             // 
             // SettingsMenu
             // 
@@ -94,7 +118,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.wallpaper;
             this.ClientSize = new System.Drawing.Size(734, 670);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.musicBar);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btnSoundBar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.returnBTN);
             this.Controls.Add(this.pictureBox1);
@@ -105,7 +131,9 @@
             this.Text = "SettingsMenu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSoundBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +144,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button returnBTN;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar btnSoundBar;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TrackBar musicBar;
     }
 }

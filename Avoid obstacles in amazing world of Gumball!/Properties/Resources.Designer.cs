@@ -120,6 +120,15 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Main_theme {
+            get {
+                return ResourceManager.GetStream("Main_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Play {

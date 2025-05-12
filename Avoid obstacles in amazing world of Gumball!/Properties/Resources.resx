@@ -154,4 +154,7 @@
   <data name="Buttons-sound-12-05-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Buttons-sound-12-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Main_theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sounds\Main theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

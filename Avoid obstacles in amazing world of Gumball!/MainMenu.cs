@@ -22,6 +22,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             clickSound = new SoundPlayer(Properties.Resources.Click);
             clickSound.Load();
             SubscribeAllButtons(this);
+            SoundManager.InitializeBackgroundMusic();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                SoundManager.StopBackgroundMusic();
+            }
         }
 
         private void SubscribeAllButtons(Control control)
@@ -41,14 +51,13 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
         //Глобальное проигрывание звука при нажатии на кнопку
         private void GlobalButtonClick(object sender, EventArgs e)
         {
-            clickSound.Play();
+            SoundManager.PlayClick();
             Button clickedButton = sender as Button;
         }
         //Кнопка выхода из игры
         private void exitBTN_Click(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer(Properties.Resources.Click);
-            player.Play();
+            SoundManager.PlayClick();
 
             if (DialogResult.Yes == MessageBox.Show(
                 "Вы действительно хотите выйти?",
@@ -81,9 +90,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
                 return;
 
             lastHoverTime = DateTime.Now;
-
-            SoundPlayer player = new SoundPlayer(Properties.Resources.Select);
-            player.Play();
+            SoundManager.PlaySelect();
         }
     }
 }
