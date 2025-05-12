@@ -15,6 +15,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
         private static float musicVolume = 1.0f;
         private static MediaPlayer backgroundMusic;
 
+        //Громкость звуков 
         public static float SoundVolume
         {
             get { return soundVolume; }
@@ -29,6 +30,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
         }
 
+        //Громкость музыки
         public static float MusicVolume
         {
             get { return musicVolume; }
@@ -42,6 +44,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
         }
 
+        //Инициализация фоновой музыки
         public static void InitializeBackgroundMusic()
         {
             try
@@ -61,10 +64,10 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
-                // Игнорируем ошибки воспроизведения
             }
         }
 
+        //Остановка фоновой музыки
         public static void StopBackgroundMusic()
         {
             try
@@ -78,10 +81,10 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
-                // Игнорируем ошибки остановки
             }
         }
 
+        //Проигрывание звука клика
         public static void PlayClick()
         {
             try
@@ -93,10 +96,10 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
-                // Игнорируем ошибки воспроизведения
             }
         }
 
+        //Проигрывание звука при наведении
         public static void PlaySelect()
         {
             try
@@ -108,10 +111,10 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
             catch
             {
-                // Игнорируем ошибки воспроизведения
             }
         }
 
+        //Инициализация настроек звука
         public static void Initialize()
         {
             SoundVolume = (float)Properties.Settings.Default.SoundVolume;

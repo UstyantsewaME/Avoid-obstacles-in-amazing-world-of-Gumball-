@@ -16,15 +16,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
     public partial class MainMenu : Form
     {
         private SoundPlayer clickSound;
+
         public MainMenu()
         {
             InitializeComponent();
             clickSound = new SoundPlayer(Properties.Resources.Click);
             clickSound.Load();
             SubscribeAllButtons(this);
-            SoundManager.InitializeBackgroundMusic();
         }
 
+        //Обработка события закрытия формы
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
@@ -34,6 +35,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             }
         }
 
+        //Подписка всех кнопок на глобальное событие клика
         private void SubscribeAllButtons(Control control)
         {
             foreach (Control c in control.Controls)
@@ -48,12 +50,14 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
                 }
             }
         }
+
         //Глобальное проигрывание звука при нажатии на кнопку
         private void GlobalButtonClick(object sender, EventArgs e)
         {
             SoundManager.PlayClick();
             Button clickedButton = sender as Button;
         }
+
         //Кнопка выхода из игры
         private void exitBTN_Click(object sender, EventArgs e)
         {
@@ -75,6 +79,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             var url = "https://github.com/UstyantsewaME/Avoid-obstacles-in-amazing-world-of-Gumball-.git";
             System.Diagnostics.Process.Start(url);
         }
+
         //Кнопка перехода в настройки
         private void settingsBTN_Click(object sender, EventArgs e)
         {
@@ -82,6 +87,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             settingsMenu.Show();
             this.Hide();
         }
+
         //Воспроизведение звука при наведении на кнопки
         private DateTime lastHoverTime = DateTime.MinValue;
         private void BTN_MouseEnter(object sender, EventArgs e)
