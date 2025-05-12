@@ -33,7 +33,7 @@
             this.playBTN = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exitBTN = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gitBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,21 +98,22 @@
             this.exitBTN.UseVisualStyleBackColor = false;
             this.exitBTN.Click += new System.EventHandler(this.exitBTN_Click);
             // 
-            // button1
+            // gitBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.Github_12_05_2025;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(3, 316);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 57);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = false;
+            this.gitBTN.BackColor = System.Drawing.Color.Transparent;
+            this.gitBTN.BackgroundImage = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.Github_12_05_2025;
+            this.gitBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gitBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gitBTN.FlatAppearance.BorderSize = 0;
+            this.gitBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gitBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gitBTN.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.gitBTN.Location = new System.Drawing.Point(3, 316);
+            this.gitBTN.Name = "gitBTN";
+            this.gitBTN.Size = new System.Drawing.Size(222, 57);
+            this.gitBTN.TabIndex = 4;
+            this.gitBTN.UseVisualStyleBackColor = false;
+            this.gitBTN.Click += new System.EventHandler(this.gitBTN_Click);
             // 
             // MainMenu
             // 
@@ -122,7 +123,7 @@
             this.BackgroundImage = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(398, 487);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.gitBTN);
             this.Controls.Add(this.exitBTN);
             this.Controls.Add(this.settingsBTN);
             this.Controls.Add(this.playBTN);
@@ -144,7 +145,7 @@
         private System.Windows.Forms.Button playBTN;
         private System.Windows.Forms.Button settingsBTN;
         private System.Windows.Forms.Button exitBTN;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button gitBTN;
     }
 }
 
