@@ -172,6 +172,12 @@
   <data name="instruction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\instruction-13-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Darwin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Darwin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gumball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Gumball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="insrtuction" xml:space="preserve">
     <value>1:
 Ты – звезда Элмора! Выбери своего любимого героя из «Удивительного мира Гамболла» и отправляйся в безумный забег через знакомые локации. Но будь осторожен – на пути тебя ждут те, с кем у твоего персонажа были… недопонимания 
@@ -189,5 +195,8 @@
 
 5:
 Ричард Уоттерсон: добраться до холодильника</value>
+  </data>
+  <data name="Richard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Richard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

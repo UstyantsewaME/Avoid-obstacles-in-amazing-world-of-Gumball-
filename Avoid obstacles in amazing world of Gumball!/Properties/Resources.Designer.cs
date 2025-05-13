@@ -102,6 +102,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Darwin {
+            get {
+                object obj = ResourceManager.GetObject("Darwin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
@@ -115,6 +125,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         internal static System.Drawing.Bitmap Github_12_05_2025 {
             get {
                 object obj = ResourceManager.GetObject("Github-12-05-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gumball {
+            get {
+                object obj = ResourceManager.GetObject("Gumball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -197,6 +217,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         internal static System.Drawing.Bitmap Play {
             get {
                 object obj = ResourceManager.GetObject("Play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Richard {
+            get {
+                object obj = ResourceManager.GetObject("Richard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

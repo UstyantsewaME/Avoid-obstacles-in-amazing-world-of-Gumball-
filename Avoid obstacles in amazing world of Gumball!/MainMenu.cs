@@ -118,9 +118,6 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
 
         private async void playBTN_Click(object sender, EventArgs e)
         {
-            await SoundManager.FadeOutBackgroundMusic();
-            
-            // Создаем новую форму
             GameForm gameForm = new GameForm();
             gameForm.Opacity = 0;
             gameForm.Show();

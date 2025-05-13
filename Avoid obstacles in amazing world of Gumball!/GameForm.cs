@@ -22,8 +22,8 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             SubscribeAllButtons(this);
             this.Opacity = 0;
             instructionIMG.Visible = true;
+            tableLayoutPanel1.Visible = false;
             nextBTN.Visible = true;
-            instructionLabel.Visible = false; // Скрываем текст до исчезновения картинки
             FadeInForm();
 
             // Загружаем инструкции из ресурсов
@@ -87,29 +87,54 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             if (instructionIMG.Visible)
             {
                 instructionIMG.Visible = false;
+                tableLayoutPanel1.Visible = true;
                 instructionLabel.Visible = true;
                 instructionIndex = 0;
-                ShowNextInstruction();
+                ShowNextInstructionAsync();
             }
             else
             {
-                ShowNextInstruction();
+                ShowNextInstructionAsync();
             }
         }
 
-        private void ShowNextInstruction()
+        private async Task ShowNextInstructionAsync()
         {
             if (instructionIndex < instructions.Count)
             {
                 instructionLabel.Visible = true;
                 instructionLabel.Text = instructions[instructionIndex];
                 nextBTN.Visible = true;
+
+                // Показываем изображение персонажа на нужных шагах
+                switch (instructionIndex)
+                {
+                    case 2: // 3-я строка (индексация с 0)
+                        characterIMG.Image = Properties.Resources.Gumball;
+                        characterIMG.Visible = true;
+                        break;
+                    case 3: // 4-я строка
+                        characterIMG.Image = Properties.Resources.Darwin;
+                        characterIMG.Visible = true;
+                        break;
+                    case 4: // 5-я строка
+                        characterIMG.Image = Properties.Resources.Richard;
+                        characterIMG.Visible = true;
+                        break;
+                    default:
+                        characterIMG.Visible = false;
+                        break;
+                }
+
                 instructionIndex++;
             }
             else
             {
                 instructionLabel.Visible = false;
                 nextBTN.Visible = false;
+                characterIMG.Visible = false;
+                tableLayoutPanel1.Visible = false;
+                await SoundManager.FadeOutBackgroundMusic();
                 // Здесь можно запустить игру или показать другие элементы
             }
         }
@@ -120,12 +145,13 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             if (instructionLabel.Visible && instructionIndex > 1)
             {
                 instructionIndex -= 2; // Шаг назад (т.к. после показа всегда ++)
-                ShowNextInstruction();
+                ShowNextInstructionAsync();
             }
             // Если показывается первая инструкция
             else if (instructionLabel.Visible && instructionIndex == 1)
             {
                 instructionLabel.Visible = false;
+                tableLayoutPanel1.Visible = false;
                 instructionIMG.Visible = true;
                 nextBTN.Visible = true;
             }

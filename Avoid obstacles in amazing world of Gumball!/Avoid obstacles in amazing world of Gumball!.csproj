@@ -116,6 +116,9 @@
     <None Include="Images\next-13-05-2025.png" />
     <None Include="Images\instruction-13-05-2025.png" />
     <None Include="insrtuction.txt" />
+    <None Include="Images\Darwin.png" />
+    <None Include="Images\Gumball.png" />
+    <None Include="Images\Richard.png" />
     <Content Include="Sounds\Click.wav" />
     <Content Include="Sounds\Main theme.wav" />
     <Content Include="Sounds\Select.wav" />
