@@ -82,10 +82,26 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
         }
 
         //Кнопка перехода в настройки
-        private void settingsBTN_Click(object sender, EventArgs e)
+        private async void settingsBTN_Click(object sender, EventArgs e)
         {
+            // Плавно скрываем текущую форму
+            for (double opacity = 1.0; opacity > 0; opacity -= 0.1)
+            {
+                this.Opacity = opacity;
+                await Task.Delay(20);
+            }
+
             SettingsMenu settingsMenu = new SettingsMenu();
+            settingsMenu.Opacity = 0;
             settingsMenu.Show();
+
+            // Плавно показываем форму настроек
+            for (double opacity = 0; opacity <= 1.0; opacity += 0.1)
+            {
+                settingsMenu.Opacity = opacity;
+                await Task.Delay(20);
+            }
+
             this.Hide();
         }
 
@@ -98,6 +114,32 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
 
             lastHoverTime = DateTime.Now;
             SoundManager.PlaySelect();
+        }
+
+        private async void playBTN_Click(object sender, EventArgs e)
+        {
+            await SoundManager.FadeOutBackgroundMusic();
+            
+            // Создаем новую форму
+            GameForm gameForm = new GameForm();
+            gameForm.Opacity = 0;
+            gameForm.Show();
+
+            // Плавно скрываем текущую форму
+            for (double opacity = 1.0; opacity > 0; opacity -= 0.1)
+            {
+                this.Opacity = opacity;
+                await Task.Delay(20);
+            }
+
+            // Плавно показываем новую форму
+            for (double opacity = 0; opacity <= 1.0; opacity += 0.1)
+            {
+                gameForm.Opacity = opacity;
+                await Task.Delay(20);
+            }
+
+            this.Hide();
         }
     }
 }

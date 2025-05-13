@@ -96,10 +96,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.Buttons_sound_12_05_2025;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 300);
+            this.pictureBox3.Image = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.music_13_05_2025__1_1;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 311);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(420, 70);
+            this.pictureBox3.Size = new System.Drawing.Size(420, 46);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -128,7 +128,7 @@
             this.MaximizeBox = false;
             this.Name = "SettingsMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SettingsMenu";
+            this.Text = "Avoid, Gumball!";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSoundBar)).EndInit();

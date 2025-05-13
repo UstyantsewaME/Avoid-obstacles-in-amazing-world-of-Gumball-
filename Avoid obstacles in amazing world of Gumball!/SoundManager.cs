@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Media;
 using System.IO;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Avoid_obstacles_in_amazing_world_of_Gumball_
 {
@@ -15,6 +16,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
         private static float soundVolume = 1.0f;
         private static float musicVolume = 1.0f;
         private static MediaPlayer backgroundMusic;
+        private static bool isFadingOut = false;
 
         //Громкость звуков 
         public static float SoundVolume
@@ -36,7 +38,7 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             set
             {
                 musicVolume = Math.Max(0, Math.Min(1, value));
-                if (backgroundMusic != null)
+                if (backgroundMusic != null && !isFadingOut)
                 {
                     backgroundMusic.Volume = musicVolume;
                 }
@@ -75,6 +77,36 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             catch (Exception ex)
             {
                 Debug.WriteLine("Ошибка инициализации музыки: " + ex.Message);
+            }
+        }
+
+        //Плавное затухание и остановка фоновой музыки
+        public static async Task FadeOutBackgroundMusic(int fadeDurationMs = 1000)
+        {
+            if (backgroundMusic == null || isFadingOut)
+                return;
+
+            try
+            {
+                isFadingOut = true;
+                float startVolume = (float)backgroundMusic.Volume;
+                float volumeStep = (float)(startVolume / (fadeDurationMs / 50)); // Update every 50ms
+
+                while (backgroundMusic.Volume > 0)
+                {
+                    backgroundMusic.Volume = Math.Max(0, backgroundMusic.Volume - volumeStep);
+                    await Task.Delay(50);
+                }
+
+                StopBackgroundMusic();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Ошибка затухания музыки: " + ex.Message);
+            }
+            finally
+            {
+                isFadingOut = false;
             }
         }
 

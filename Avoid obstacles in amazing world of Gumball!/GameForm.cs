@@ -4,44 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avoid_obstacles_in_amazing_world_of_Gumball_
 {
-    public partial class SettingsMenu : Form
+    public partial class GameForm : Form
     {
-        private SoundPlayer clickSound;
-
-        public SettingsMenu()
+        public GameForm()
         {
             InitializeComponent();
-            clickSound = new SoundPlayer(Properties.Resources.Click);
-            clickSound.Load();
             SubscribeAllButtons(this);
-
-            btnSoundBar.ValueChanged += BtnSoundBar_ValueChanged;
-            musicBar.ValueChanged += MusicBar_ValueChanged;
-        }
-
-        //Обработка изменения громкости звуков
-        private void BtnSoundBar_ValueChanged(object sender, EventArgs e)
-        {
-            float value = btnSoundBar.Value / 10.0f;
-            SoundManager.SoundVolume = value;
-            Properties.Settings.Default.SoundVolume = (decimal)value;
-            Properties.Settings.Default.Save();
-        }
-
-        //Обработка изменения громкости музыки
-        private void MusicBar_ValueChanged(object sender, EventArgs e)
-        {
-            float value = musicBar.Value / 10.0f;
-            SoundManager.MusicVolume = value;
-            Properties.Settings.Default.MusicVolume = (decimal)value;
-            Properties.Settings.Default.Save();
         }
 
         //Подписка всех кнопок на глобальное событие клика
@@ -67,7 +41,17 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
             Button clickedButton = sender as Button;
         }
 
-        //Кнопка возврата в главное меню
+        //Воспроизведение звука при наведении на кнопки
+        private DateTime lastHoverTime = DateTime.MinValue;
+        private void BTN_MouseEnter(object sender, EventArgs e)
+        {
+            if ((DateTime.Now - lastHoverTime).TotalMilliseconds < 100)
+                return;
+
+            lastHoverTime = DateTime.Now;
+            SoundManager.PlaySelect();
+        }
+
         private async void returnBTN_Click(object sender, EventArgs e)
         {
             // Плавно скрываем текущую форму
@@ -88,18 +72,13 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_
                 await Task.Delay(20);
             }
 
+            SoundManager.InitializeBackgroundMusic();
             this.Close();
         }
 
-        //Воспроизведение звука при наведении на кнопки
-        private DateTime lastHoverTime = DateTime.MinValue;
-        private void BTN_MouseEnter(object sender, EventArgs e)
+        private void nextBTN_Click(object sender, EventArgs e)
         {
-            if ((DateTime.Now - lastHoverTime).TotalMilliseconds < 100)
-                return;
 
-            lastHoverTime = DateTime.Now;
-            SoundManager.PlaySelect();
         }
     }
 }

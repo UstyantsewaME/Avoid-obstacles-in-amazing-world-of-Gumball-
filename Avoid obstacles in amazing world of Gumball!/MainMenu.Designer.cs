@@ -69,6 +69,7 @@
             this.playBTN.Size = new System.Drawing.Size(175, 57);
             this.playBTN.TabIndex = 1;
             this.playBTN.UseVisualStyleBackColor = false;
+            this.playBTN.Click += new System.EventHandler(this.playBTN_Click);
             this.playBTN.MouseEnter += new System.EventHandler(this.BTN_MouseEnter);
             // 
             // pictureBox1

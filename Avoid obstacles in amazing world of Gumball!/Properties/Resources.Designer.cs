@@ -131,6 +131,36 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap music_13_05_2025__1_ {
+            get {
+                object obj = ResourceManager.GetObject("music-13-05-2025 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap music_13_05_2025__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("music-13-05-2025 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap next_13_05_2025 {
+            get {
+                object obj = ResourceManager.GetObject("next-13-05-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Play {
             get {
                 object obj = ResourceManager.GetObject("Play", resourceCulture);
@@ -183,6 +213,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         internal static System.Drawing.Bitmap wallpaper {
             get {
                 object obj = ResourceManager.GetObject("wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallpaperflare_com_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("wallpaperflare.com_wallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
