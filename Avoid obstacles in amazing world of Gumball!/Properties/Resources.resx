@@ -124,11 +124,11 @@
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Github-12-05-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Github-12-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sounds\Click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="settigns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\settigns-12-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="music-13-05-2025 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\music-13-05-2025 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,11 +139,14 @@
   <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="return-12-05-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="return" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\return-12-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\next-13-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,10 +166,28 @@
   <data name="Select" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sounds\Select.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="settigns-12-05-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\settigns-12-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Github-12-05-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Github-12-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="next-13-05-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\next-13-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="instruction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\instruction-13-05-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insrtuction" xml:space="preserve">
+    <value>1:
+Ты – звезда Элмора! Выбери своего любимого героя из «Удивительного мира Гамболла» и отправляйся в безумный забег через знакомые локации. Но будь осторожен – на пути тебя ждут те, с кем у твоего персонажа были… недопонимания 
+
+2:
+Как играть? Беги, прыгай, уворачивайся! Чем дальше забег – тем круче результат. Избегай противников – это те самые персонажи, которые вечно портят жизнь твоему герою в мультике. Попался? Замедление или даже конец забега! Собирай бонусы – они дают суперскорость, временную неуязвимость или другие крутые плюшки. Достигай цели – у каждого героя своя мотивация
+
+3:
+Гамболл Уоттерсон: успеть на урок к мисс Симиан
+
+
+4:
+Дарвин Уоттерсон: добежать до аквариума и не умереть
+
+
+5:
+Ричард Уоттерсон: добраться до холодильника</value>
   </data>
 </root>

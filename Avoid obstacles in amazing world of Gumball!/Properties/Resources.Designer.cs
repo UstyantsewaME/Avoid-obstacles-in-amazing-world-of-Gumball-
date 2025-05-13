@@ -63,6 +63,16 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _return {
+            get {
+                object obj = ResourceManager.GetObject("return", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button {
             get {
                 object obj = ResourceManager.GetObject("Button", resourceCulture);
@@ -110,6 +120,29 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на 1:
+        ///Ты – звезда Элмора! Выбери своего любимого героя из «Удивительного мира Гамболла» и отправляйся в безумный забег через знакомые локации. Но будь осторожен – на пути тебя ждут те, с кем у твоего персонажа были… недопонимания 
+        ///
+        ///2:
+        ///Как играть? Беги, прыгай, уворачивайся! Чем дальше забег – тем круче результат. Избегай противников – это те самые персонажи, которые вечно портят жизнь твоему герою в мультике. Попался? Замедление или даже конец забега! Собирай бонусы – они дают суперскорость, временную неуя [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string insrtuction {
+            get {
+                return ResourceManager.GetString("insrtuction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instruction {
+            get {
+                object obj = ResourceManager.GetObject("instruction", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Logo {
@@ -151,9 +184,9 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap next_13_05_2025 {
+        internal static System.Drawing.Bitmap next {
             get {
-                object obj = ResourceManager.GetObject("next-13-05-2025", resourceCulture);
+                object obj = ResourceManager.GetObject("next", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -164,16 +197,6 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         internal static System.Drawing.Bitmap Play {
             get {
                 object obj = ResourceManager.GetObject("Play", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap return_12_05_2025 {
-            get {
-                object obj = ResourceManager.GetObject("return-12-05-2025", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -190,9 +213,9 @@ namespace Avoid_obstacles_in_amazing_world_of_Gumball_.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap settigns_12_05_2025 {
+        internal static System.Drawing.Bitmap settigns {
             get {
-                object obj = ResourceManager.GetObject("settigns-12-05-2025", resourceCulture);
+                object obj = ResourceManager.GetObject("settigns", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

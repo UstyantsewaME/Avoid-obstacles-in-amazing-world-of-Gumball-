@@ -46,7 +46,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.settigns_12_05_2025;
+            this.pictureBox1.Image = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.settigns;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(710, 155);
@@ -57,7 +57,7 @@
             // returnBTN
             // 
             this.returnBTN.BackColor = System.Drawing.Color.Transparent;
-            this.returnBTN.BackgroundImage = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources.return_12_05_2025;
+            this.returnBTN.BackgroundImage = global::Avoid_obstacles_in_amazing_world_of_Gumball_.Properties.Resources._return;
             this.returnBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.returnBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.returnBTN.FlatAppearance.BorderSize = 0;
